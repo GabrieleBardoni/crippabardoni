@@ -1,0 +1,26 @@
+    <section class="container">
+        <div class="coupon-card">
+            <img src="/immagini/card1.png" style="width: 100px;" class="logo">
+            <h3>20% usando questo codice</h3>
+            <p>Valido Fino: 31 Gennaio 2023</p>
+            <div class="coupon-row">
+                <span id="Code">GENNAIO23</span>
+                <span id="Btn">COPIA</span>
+            </div>
+        </div>
+        <script>
+            var Btn=document.getElementById("Btn");
+            var Code=document.getElementById("Code");
+    
+            Btn.onclick=function(){
+                navigator.clipboard.writeText(Code.innerHTML)
+                Btn.innerHTML="COPIATO"
+                setTimeout(function(){
+                    Btn.innerHTML="COPIA"
+                }, 3000);
+            }
+        </script>
+    </section>
+
+</body>
+</html>
